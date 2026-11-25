@@ -1,23 +1,39 @@
-import { createFileRoute } from "@tanstack/react-router";
+import { createFileRoute, Link } from "@tanstack/react-router";
+import { useEffect, useState } from "react";
+import { SiteLayout, meta } from "@/components/SiteLayout";
+import { subjects, bestKey } from "@/data/questions";
 
-// The home route ships no og:image, so serve-time hosting can inject the
-// project's social preview (explicit og:image or latest screenshot).
 export const Route = createFileRoute("/")({
+  head: () => ({ meta: meta("WASSCE Prep Hub — Free WASSCE Practice Quizzes", "Free timed WASSCE practice quizzes for Core Maths, Integrated Science, English and Social Studies with instant explanations.") }),
   component: Index,
 });
 
-// IMPORTANT: Replace this placeholder. See ./README.md for routing conventions.
 function Index() {
+  const [best, setBest] = useState<Record<string, number>>({});
+  useEffect(() => {
+    const b: Record<string, number> = {};
+    subjects.forEach((s) => { const v = localStorage.getItem(bestKey(s.id)); if (v) b[s.id] = Number(v); });
+    setBest(b);
+  }, []);
   return (
-    <div
-      className="flex min-h-screen items-center justify-center"
-      style={{ backgroundColor: "#fcfbf8" }}
-    >
-      <img
-        data-lovable-blank-page-placeholder="REMOVE_THIS"
-        src="https://cdn.gpteng.co/blank-app-v1.svg"
-        alt="Your app will live here!"
-      />
-    </div>
+    <SiteLayout>
+      <section className="mb-8">
+        <p className="text-sm font-semibold text-accent uppercase tracking-wider">For SHS students</p>
+        <h1 className="text-4xl font-extrabold mt-1 leading-tight">Practise WASSCE questions.<br /><span className="text-primary">Pass with confidence.</span></h1>
+        <p className="mt-3 text-muted-foreground">Pick a subject, beat the timer and learn from every answer.</p>
+      </section>
+      <div className="grid gap-4 sm:grid-cols-2">
+        {subjects.map((s) => (
+          <Link key={s.id} to="/quiz/$subject" params={{ subject: s.id }} className="group rounded-2xl border bg-card p-5 shadow-sm transition active:scale-[.98] hover:border-primary">
+            <div className="text-3xl">{s.emoji}</div>
+            <h2 className="mt-3 text-xl font-bold">{s.name}</h2>
+            <div className="mt-2 flex justify-between text-sm text-muted-foreground">
+              <span>{s.questions.length} questions</span>
+              <span className="font-semibold text-foreground">Best: {best[s.id] !== undefined ? `${best[s.id]}%` : "—"}</span>
+            </div>
+          </Link>
+        ))}
+      </div>
+    </SiteLayout>
   );
 }
