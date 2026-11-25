@@ -13,7 +13,7 @@ export const Route = createFileRoute("/about")({
         <h2>What you can do</h2>
         <ul className="list-disc pl-5"><li>Take timed or relaxed practice quizzes</li><li>See instant explanations for every answer</li><li>Track your best score per subject</li><li>Share your results with friends</li></ul>
         <h2>Contact</h2>
-        <p>Questions or suggestions? Email us at <strong>hello@wassceprephub.com</strong>.</p>
+        <p>Questions or suggestions? Email us at <strong>codeart2627@gmail.com</strong>.</p>
         <p className="text-xs">WASSCE Prep Hub is an independent study tool and is not affiliated with WAEC.</p>
       </article>
     </SiteLayout>

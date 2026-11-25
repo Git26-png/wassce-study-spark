@@ -18,7 +18,7 @@ export const Route = createFileRoute("/privacy")({
         <h2>Children's privacy</h2>
         <p>Our site is meant for students. We do not knowingly collect personal information from anyone.</p>
         <h2>Contact</h2>
-        <p>For privacy questions, email <strong>hello@wassceprephub.com</strong>.</p>
+        <p>For privacy questions, email <strong>codeart2627@gmail.com</strong>.</p>
       </article>
     </SiteLayout>
   ),
