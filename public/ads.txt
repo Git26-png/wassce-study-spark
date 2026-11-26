@@ -1,3 +1,1 @@
-# ads.txt is added only after the Google AdSense account and its publisher ID are approved.
-# Do not publish a placeholder publisher ID.
-# Replace this file with the exact single ad-system line shown in your AdSense account.
+google.com, pub-7751341503177836, DIRECT, f08c47fec0942fa0
