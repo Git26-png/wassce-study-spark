@@ -1,5 +1,5 @@
-# This sitemap should be updated if a new public indexable page is added.
+# Allow crawlers to index all public pages.
 User-agent: *
 Allow: /
 
-Sitemap: https://YOUR-CUSTOM-DOMAIN.example/sitemap.xml
+Sitemap: https://marvelous-queijadas-b6ce78.netlify.app/sitemap.xml
