@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <url><loc>https://YOUR-CUSTOM-DOMAIN.example/</loc></url>
+  <url><loc>https://YOUR-CUSTOM-DOMAIN.example/tips</loc></url>
+  <url><loc>https://YOUR-CUSTOM-DOMAIN.example/about</loc></url>
+  <url><loc>https://YOUR-CUSTOM-DOMAIN.example/privacy</loc></url>
+  <url><loc>https://YOUR-CUSTOM-DOMAIN.example/contact</loc></url>
+  <url><loc>https://YOUR-CUSTOM-DOMAIN.example/quiz/core-maths</loc></url>
+  <url><loc>https://YOUR-CUSTOM-DOMAIN.example/quiz/integrated-science</loc></url>
+  <url><loc>https://YOUR-CUSTOM-DOMAIN.example/quiz/english</loc></url>
+  <url><loc>https://YOUR-CUSTOM-DOMAIN.example/quiz/social-studies</loc></url>
+</urlset>

@@ -1,11 +1,3 @@
-# Put your Google AdSense line here once your account is approved.
-# It must look exactly like this (one line, no spaces around the equals signs):
-#
-# google.com, pub-000000000000000, DIRECT, f08c47fec0942fa0
-#
-# Replace pub-000000000000000 with your own publisher ID from AdSense.
-# Your publisher ID looks like "pub-" followed by 16 digits and is found in
-# AdSense under Account > Account information (or in the AdSense code snippet).
-#
-# Save the file, then check that https://your-site.com/ads.txt opens in a browser.
-# Google usually takes up to a few days to notice the file after you save it.
+# ads.txt is added only after the Google AdSense account and its publisher ID are approved.
+# Do not publish a placeholder publisher ID.
+# Replace this file with the exact single ad-system line shown in your AdSense account.
