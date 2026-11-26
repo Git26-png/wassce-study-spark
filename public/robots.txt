@@ -1,5 +1,4 @@
-# This sitemap should be updated if a new public indexable page is added.
 User-agent: *
 Allow: /
 
-Sitemap: https://YOUR-CUSTOM-DOMAIN.example/sitemap.xml
+Sitemap: https://wassce-study-spark.netlify.app/sitemap.xml

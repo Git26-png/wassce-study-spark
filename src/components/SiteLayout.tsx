@@ -5,13 +5,8 @@ export function SiteLayout({ children }: { children: ReactNode }) {
   const [dark, setDark] = useState(false);
   useEffect(() => { setDark(localStorage.getItem("wph-theme") === "dark"); }, []);
   useEffect(() => { document.documentElement.classList.toggle("dark", dark); }, [dark]);
-  const toggle = () => {
-    const next = !dark;
-    setDark(next);
-    localStorage.setItem("wph-theme", next ? "dark" : "light");
-  };
+  const toggle = () => { const next = !dark; setDark(next); localStorage.setItem("wph-theme", next ? "dark" : "light"); };
   const nav = [["/", "Home"], ["/tips", "Exam Tips"], ["/about", "About"], ["/privacy", "Privacy"], ["/contact", "Contact"]] as const;
-
   return (
     <div className="min-h-screen flex flex-col">
       <div className="kente-stripe" />
@@ -30,11 +25,7 @@ export function SiteLayout({ children }: { children: ReactNode }) {
       <footer className="border-t py-6">
         <div className="mx-auto max-w-3xl px-4 text-center text-xs text-muted-foreground">
           <p>© {new Date().getFullYear()} WASSCE Prep Hub. Practice smart, pass strong.</p>
-          <nav aria-label="Footer navigation" className="mt-3 flex flex-wrap justify-center gap-4">
-            <Link to="/about" className="underline underline-offset-4">About</Link>
-            <Link to="/privacy" className="underline underline-offset-4">Privacy Policy</Link>
-            <Link to="/contact" className="underline underline-offset-4">Contact & Terms</Link>
-          </nav>
+          <nav aria-label="Footer navigation" className="mt-3 flex flex-wrap justify-center gap-4"><Link to="/about" className="underline underline-offset-4">About</Link><Link to="/privacy" className="underline underline-offset-4">Privacy Policy</Link><Link to="/contact" className="underline underline-offset-4">Contact & Terms</Link></nav>
           <p className="mt-3">Independent educational project. Not affiliated with or endorsed by WAEC.</p>
         </div>
       </footer>
@@ -48,5 +39,6 @@ export const meta = (title: string, description: string) => [
   { property: "og:title", content: title },
   { property: "og:description", content: description },
   { property: "og:type", content: "website" },
+  { property: "og:site_name", content: "WASSCE Prep Hub" },
   { name: "twitter:card", content: "summary" },
 ];
